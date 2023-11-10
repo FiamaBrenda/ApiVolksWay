@@ -1,16 +1,18 @@
 package com.grupo.apiVolksWay.dtos;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.grupo.apiVolksWay.models.TipoModel;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
+import java.util.UUID;
 
 public record UsuarioDto(
 
-        String id_empresa,
+
         @NotBlank String nome,
 
         @NotBlank String telefone,
@@ -23,7 +25,10 @@ public record UsuarioDto(
         String cidade,
         String cpf,
 
-        String tipo_usuario
+        TipoModel tipo_usuario,
+
+        MultipartFile imagem
+
 
 ) {
 }
