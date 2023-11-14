@@ -47,7 +47,7 @@ public class EmpresaController {
         return ResponseEntity.status(HttpStatus.CREATED).body(empresaRepository.save(novaEmpresa));
     }
 
-    @PutMapping("/{idempresa}")
+    @PutMapping("/{idEmpresa}")
     public ResponseEntity<Object> editarEmpresa(@PathVariable(value = "idEmpresa") UUID id, @RequestBody @Valid EmpresaDto empresaDto){
 
         Optional<EmpresaModel> empresaBuscada = empresaRepository.findById(id);

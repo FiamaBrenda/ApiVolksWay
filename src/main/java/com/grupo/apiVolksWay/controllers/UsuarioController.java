@@ -52,7 +52,7 @@ public class UsuarioController {
     @Operation(summary = "Método para cadastrar um usuario", method ="POST")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "201", description = "Cadastro foi efetuado com sucesso"),
-            @ApiResponse(responseCode = "400", description = "Parâmetros invaidos"),
+            @ApiResponse(responseCode = "400", description = "Parâmetros invalidos"),
     })
     public ResponseEntity<Object> criarUsuario(@ModelAttribute @Valid UsuarioDto usuarioDto){
 
